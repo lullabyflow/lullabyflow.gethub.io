@@ -275,17 +275,17 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/20/insist/" itemprop="url">
-		<time datetime="2019-02-20T12:54:28.594Z" itemprop="datePublished">
-	  		2019-02-20
+	<a href="/2019/02/21/Nginx服务器安装/" itemprop="url">
+		<time datetime="2019-02-21T12:25:01.742Z" itemprop="datePublished">
+	  		2019-02-21
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/02/20/insist/" itemprop="url">
-		<time datetime="2019-02-20T12:54:28.594Z" itemprop="dateUpdated">
-	  		2019-02-20
+	<a href="/2019/02/21/Nginx服务器安装/" itemprop="url">
+		<time datetime="2019-02-21T12:25:01.742Z" itemprop="dateUpdated">
+	  		2018-12-20
 	  </time>
 	</a> 	
 
@@ -298,7 +298,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/20/insist/_visitors" data-url="/2019/02/20/insist/" data-title>
+    <span class="leancloud_visitors" id="/2019/02/21/Nginx服务器安装/_visitors" data-url="/2019/02/21/Nginx服务器安装/" data-title>
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -307,7 +307,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/20/insist/_likes" data-url="/2019/02/20/insist/" data-title rel="unlike">
+    <span class="leancloud_likes" id="/2019/02/21/Nginx服务器安装/_likes" data-url="/2019/02/21/Nginx服务器安装/" data-title rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -316,8 +316,46 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<hr>
-<h2 id="荀子"><a href="#荀子" class="headerlink" title="荀子"></a>荀子</h2><p>骐骥一跃<br>不能十步<br>驽马十驾<br>功在不舍</p>
+		<h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h3 id="1-阿里云添加80端口"><a href="#1-阿里云添加80端口" class="headerlink" title="1.阿里云添加80端口"></a>1.阿里云添加80端口</h3><p>阿里云上默认只有一个22端口用来做远程登录，如果希望在阿里云上安装支持http请求的nginx服务器，需要给阿里云添加80端口</p>
+<p><img src="./img/aliyun0.png" alt="打开安全组设置"><br><img src="./img/aliyun2.png" alt><br><img src="./img/aliyun3.png" alt><br><img src="./img/aliyun4.png" alt></p>
+<h3 id="2-安装nginx"><a href="#2-安装nginx" class="headerlink" title="2. 安装nginx"></a>2. 安装nginx</h3><p>a) 添加nginx存储库  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release</span><br></pre></td></tr></table></figure>
+<p>b) 安装nginx</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	yum install nginx</span><br><span class="line">```  </span><br><span class="line">c) 运行nginx  </span><br><span class="line">Nginx不会自行启动。要运行Nginx</span><br></pre></td></tr></table></figure>
+<pre><code>systemctl start nginx
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nginx的运行命令:</span><br></pre></td></tr></table></figure>
+<pre><code>systemctl status nginx 查看nginx的状态  
+systemctl start/stop/enable/disable nginx 启动/关闭/设置开机启动/禁止开机启动  
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">d) 系统启动时启动Nginx</span><br></pre></td></tr></table></figure>
+<pre><code>systemctl enable nginx
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">e）如果您正在运行防火墙，请运行以下命令以允许HTTP和HTTPS通信：</span><br></pre></td></tr></table></figure>
+<pre><code>sudo firewall-cmd --permanent --zone=public --add-service=http 
+
+sudo firewall-cmd --permanent --zone=public --add-service=https
+
+sudo firewall-cmd --reload
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### 3.nginx目录共享配置  </span><br><span class="line">a) 在contOS目录中确定一个需要共享的文件夹，例如： /home/yuting  </span><br><span class="line">b) 打开 etc/nginx/nginx.conf 文件，设置server</span><br></pre></td></tr></table></figure>
+<pre><code>#共享设置 - 在浏览器中输入服务器ip地址，会展示共享目录的文件列表
+root /home/yuting;
+location / {
+       autoindex on;
+       autoindex_exact_size on;
+       autoindex_localtime on;
+}  
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">除了可以共享文件，还可以自定义页面</span><br></pre></td></tr></table></figure>
+<pre><code>#自定义服务器页面
+location / {
+        root /home/yuting;
+        index index.html index.htm;
+}
+</code></pre><p><code>`</code></p>
+<p>注意： 如果出现权限问题，可以修改目录的权限  </p>
+<h1 id="ssh密钥认证"><a href="#ssh密钥认证" class="headerlink" title="ssh密钥认证"></a>ssh密钥认证</h1><p>1.在主机和从机上执行：<code>ssh-keygen</code></p>
+<p>2.在从机上执行:  <code>scp  id_rsa.pub  root@主机地址:~/.ssh/master.pub</code><br>(上面这条指令是将从机上的 id_rsa.pub文件拷贝传递给到主机的.ssh文件夹下，并且命名为’master.pub’)</p>
+<p>3.在主机中的.ssh文件夹中创建authorized_keys文件： <code>touch authorized_keys</code> </p>
+<p>4.修改文件authorized_keys的权限: <code>chmod 600  authorized_keys</code>  </p>
+<p>5.将master.pub放进authorized_keys文件中:  <code>cat master.pub &gt;&gt;  authorized_keys</code></p>
+<p>6.在操作主机的时候，需要主机能够自己免密访问自己就将自己的公钥放在自己的authorized_keys文件中</p>
 	
 	</div>
 	
@@ -335,12 +373,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/02/21/git常用指令/" title rel="prev">
+			<a href="/2019/02/21/vim编辑器之神/" title rel="prev">
 				&laquo;上一篇
 			</a>
 		
 		
-			<a href="/2019/02/18/hello-world/" title="Hello World" rel="next">
+			<a href="/2019/02/21/MySQL配置/" title rel="next">
 				下一篇&raquo;
 			</a>
 			

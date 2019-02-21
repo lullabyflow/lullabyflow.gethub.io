@@ -275,17 +275,17 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/20/insist/" itemprop="url">
-		<time datetime="2019-02-20T12:54:28.594Z" itemprop="datePublished">
-	  		2019-02-20
+	<a href="/2019/02/21/MySQL配置/" itemprop="url">
+		<time datetime="2019-02-21T12:25:01.740Z" itemprop="datePublished">
+	  		2019-02-21
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/02/20/insist/" itemprop="url">
-		<time datetime="2019-02-20T12:54:28.594Z" itemprop="dateUpdated">
-	  		2019-02-20
+	<a href="/2019/02/21/MySQL配置/" itemprop="url">
+		<time datetime="2019-02-21T12:25:01.740Z" itemprop="dateUpdated">
+	  		2019-02-21
 	  </time>
 	</a> 	
 
@@ -298,7 +298,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/20/insist/_visitors" data-url="/2019/02/20/insist/" data-title>
+    <span class="leancloud_visitors" id="/2019/02/21/MySQL配置/_visitors" data-url="/2019/02/21/MySQL配置/" data-title>
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -307,7 +307,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/20/insist/_likes" data-url="/2019/02/20/insist/" data-title rel="unlike">
+    <span class="leancloud_likes" id="/2019/02/21/MySQL配置/_likes" data-url="/2019/02/21/MySQL配置/" data-title rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -316,8 +316,29 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<hr>
-<h2 id="荀子"><a href="#荀子" class="headerlink" title="荀子"></a>荀子</h2><p>骐骥一跃<br>不能十步<br>驽马十驾<br>功在不舍</p>
+		<p>MySQL配置  </p>
+<ol>
+<li><p>下载MySQL源安装包: <code>wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</code>  </p>
+</li>
+<li><p>安装MySQL源: <code>yum localinstall mysql57-community-release-el7-8.noarch.rpm</code></p>
+</li>
+<li><p>安装MySQL:  <code>yum install mysql-community-server</code>  </p>
+</li>
+<li><p>设置开启启动MySQL服务: <code>systemctl enable mysqld</code>  </p>
+</li>
+<li>启动/重启MySQL服务：systemctl restart mysqld  </li>
+<li>查看MySQL初始密码：grep ‘A temporary password’ /var/log/mysqld.log  </li>
+<li>更改MySQL密码：mysqladmin -u root -p’旧密码’ password ‘新密码’<br> 这里更改密码出了问题，更改失败，这是因为密码太过简单的原因。有两个接解决方法：</li>
+</ol>
+<p>　　　　方法一：把密码设置复杂点（这是最直接的方法）</p>
+<p>　　　　方法二：关闭mysql密码强度验证(validate_password)</p>
+<p>　　　　　　　　编辑配置文件：<code>vim /etc/my.cnf</code>， 增加这么一行validate_password=off</p>
+<p>　　　　　　　　编辑后重启mysql服务：<code>systemctl restart mysqld</code>  
+　　　　　　　　  
+　　　　　　　　  </p>
+<ol start="8">
+<li>设置mysql能够远程访问:<br> a. 登录进MySQL:  <code>mysql -uroot -p密码</code><br> b. 增加一个用户给予访问权限: <code>grant all privileges on *.* to &#39;root&#39;@&#39;ip地址&#39; identified by &#39;密码&#39; with grant option;</code><br> c. 刷新权限：<code>flush privileges;­</code>  </li>
+</ol>
 	
 	</div>
 	
@@ -335,12 +356,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/02/21/git常用指令/" title rel="prev">
+			<a href="/2019/02/21/Nginx服务器安装/" title rel="prev">
 				&laquo;上一篇
 			</a>
 		
 		
-			<a href="/2019/02/18/hello-world/" title="Hello World" rel="next">
+			<a href="/2019/02/21/Hexo博客搭建/" title rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -462,13 +483,6 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-		
-
-		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	
 		</main>
 		

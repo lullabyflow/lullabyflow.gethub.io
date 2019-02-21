@@ -275,16 +275,16 @@
 		<span>
 			
 	发布于
-	<a href="/2019/02/20/insist/" itemprop="url">
-		<time datetime="2019-02-20T12:54:28.594Z" itemprop="datePublished">
-	  		2019-02-20
+	<a href="/2019/02/21/Hexo博客搭建/" itemprop="url">
+		<time datetime="2019-02-21T12:25:01.737Z" itemprop="datePublished">
+	  		2019-02-21
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/02/20/insist/" itemprop="url">
-		<time datetime="2019-02-20T12:54:28.594Z" itemprop="dateUpdated">
+	<a href="/2019/02/21/Hexo博客搭建/" itemprop="url">
+		<time datetime="2019-02-21T12:25:01.737Z" itemprop="dateUpdated">
 	  		2019-02-20
 	  </time>
 	</a> 	
@@ -298,7 +298,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/02/20/insist/_visitors" data-url="/2019/02/20/insist/" data-title>
+    <span class="leancloud_visitors" id="/2019/02/21/Hexo博客搭建/_visitors" data-url="/2019/02/21/Hexo博客搭建/" data-title>
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -307,7 +307,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/02/20/insist/_likes" data-url="/2019/02/20/insist/" data-title rel="unlike">
+    <span class="leancloud_likes" id="/2019/02/21/Hexo博客搭建/_likes" data-url="/2019/02/21/Hexo博客搭建/" data-title rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -316,8 +316,24 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<hr>
-<h2 id="荀子"><a href="#荀子" class="headerlink" title="荀子"></a>荀子</h2><p>骐骥一跃<br>不能十步<br>驽马十驾<br>功在不舍</p>
+		<p>Hexo博客搭建   </p>
+<p>###1. 搭建博客<br>使用hexo搭建个人博客前需要先在自己的电脑上装好git和node.js   </p>
+<ol>
+<li>首先在自己的电脑上创建一个空的文件夹’Hexo’  </li>
+<li>在gitbash中终端中通过<code>cd</code>指令进入到刚才创建的文件夹中   </li>
+<li>输入指令 <code>npm install -g hexo</code> 安装Hexo  </li>
+<li>输入指令 <code>hexo init</code> 进行初始化  </li>
+<li>依次输入指令<code>npm install</code> <code>hexo server</code> 启动服务器<br> 博客内容发生改变后可以通过<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> <code>hexo server</code>刷新后重新启动    </li>
+</ol>
+<p>###2. 部署博客  </p>
+<ol>
+<li>在github上创建一个空的仓库，仓库名： <code>用户名.github.io</code>  </li>
+<li><p>修改博客本地仓库中的配置文件（Hexo目录下的_config.yml文件）,在文件末尾添加一下选中内容<br><img src="/Users/yuting/Desktop/Hexo/image1.png" alt>  </p>
+</li>
+<li><p>使用git部署, 输入指令<code>npm install hexo-deployer-git --save</code>  </p>
+</li>
+<li>输入指令<code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> 对博客进行提交</li>
+</ol>
 	
 	</div>
 	
@@ -335,12 +351,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/02/21/git常用指令/" title rel="prev">
+			<a href="/2019/02/21/MySQL配置/" title rel="prev">
 				&laquo;上一篇
 			</a>
 		
 		
-			<a href="/2019/02/18/hello-world/" title="Hello World" rel="next">
+			<a href="/2019/02/21/git常用指令/" title rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -462,13 +478,6 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-		
-
-		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	
 		</main>
 		
