@@ -1,0 +1,613 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+       | Hexo
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content>
+  <meta name="description" content>
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+</head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						<img src="/img/logo.png" alt="Logo">
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">相册</a>
+						</li>
+					
+
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i>继续阅读</a>
+				</li>
+				<li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">相册</a>
+				</li>
+			
+
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2019/02/25/MysqL 基础语法 DDL &DML/" itemprop="url">
+		<time datetime="2019-02-25T09:54:26.137Z" itemprop="datePublished">
+	  		2019-02-25
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2019/02/25/MysqL 基础语法 DDL &DML/" itemprop="url">
+		<time datetime="2019-02-25T09:54:26.137Z" itemprop="dateUpdated">
+	  		2019-02-25
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+					
+		</span>
+		/
+		
+
+    <span class="leancloud_visitors" id="/2019/02/25/MysqL 基础语法 DDL &DML/_visitors" data-url="/2019/02/25/MysqL 基础语法 DDL &DML/" data-title>
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2019/02/25/MysqL 基础语法 DDL &DML/_likes" data-url="/2019/02/25/MysqL 基础语法 DDL &DML/" data-title rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<hr>
+<h2 id="2-25-Mysql语法-DDL-amp-DML"><a href="#2-25-Mysql语法-DDL-amp-DML" class="headerlink" title="2.25 Mysql语法 DDL&amp;DML"></a>2.25 Mysql语法 DDL&amp;DML</h2><h1 id="sql-语法"><a href="#sql-语法" class="headerlink" title="sql 语法"></a>sql 语法</h1><p>– DDL(数据定义语言)</p>
+<p>– DML(数据操作语言 )</p>
+<p>– DCL（数据控制语言）</p>
+<p>– 注意：sql中大小写不敏感（大写和小写是一样的），每条sql语句以分号结束</p>
+<h2 id="一-DDL-主要提供数据库和表的创建、删除和修改"><a href="#一-DDL-主要提供数据库和表的创建、删除和修改" class="headerlink" title="一.DDL -主要提供数据库和表的创建、删除和修改"></a>一.DDL -主要提供数据库和表的创建、删除和修改</h2><h3 id="0-删除数据库"><a href="#0-删除数据库" class="headerlink" title="0.删除数据库"></a>0.删除数据库</h3><figure class="highlight plain"><figcaption><span>DATABASE school；;  ```--直接删除指定数据库</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">drop DATABASE if EXISTS school； </span><br><span class="line">-- --如果指定的数据库存在删除数据库</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 1.创建数据库</span><br><span class="line">-- 直接创建数据库</span><br></pre></td></tr></table></figure>
+<p>create database school;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-- 当指定数据库不存在创建数据库</span><br></pre></td></tr></table></figure></p>
+<p>CREATE DATABASE if NOT EXISTS school2; <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-- 支持中文</span><br></pre></td></tr></table></figure></p>
+<p>create database if not exists school default CHARSET utf8;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.使用/切换数据库  :use 数据库名</span><br></pre></td></tr></table></figure>
+<p>use school2;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 3.新建表  create table 表名（字段名1 类型1，字段名2 类型2。。。）</span><br><span class="line"></span><br><span class="line">-- 注意：</span><br><span class="line"></span><br><span class="line">a.表名一般需要加前缀’t&apos;或者‘tb’   </span><br><span class="line"></span><br><span class="line">b.字段用来确定表中存储哪些数据，字段名随便命名，但不能是关键字。</span><br><span class="line"></span><br><span class="line">c.数据类型必须是mysql支持的数据类型</span><br><span class="line"></span><br><span class="line">-- 常用数据类型：int  定长字符串char(size)  不定长字符串varchar(size)   无约束字符串text</span><br></pre></td></tr></table></figure></p>
+<p>create table t_student(stuid int,stuname varchar(20),gender bit,birth date);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">--  create table 表名（字段名1 类型1，字段名2 类型2。。。）</span><br><span class="line"></span><br><span class="line">--  常用的约束：not null --不能为空  default-- 默认值  unique --值唯一    primary KEY - 主键约束</span><br><span class="line"></span><br><span class="line">-- 主键约束：指的是表中能够唯一标识一条记录的字段（通过主键值能够找到表中唯一一行记录。）</span><br><span class="line"></span><br><span class="line">-- 注意：一个字段可以添加多个约束，多个约束之间用空格隔开</span><br></pre></td></tr></table></figure></p>
+<p>create table t_student(<br>– auto_increment 自动增长，只针对primary key有效，并且primary key的类型是int<br>stuid int not null auto_increment,<br>stuname varchar(20) not null,<br>gender bit default 1 ,<br>birth date,<br>– 设置primary key 为stuid,设置一个字段为主键，其实间接约束了当前字段的值唯一<br>primary key(stuid));<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 4.删除表：drop table if exists </span><br><span class="line">### 清空表：truncate table (不能使用if exists)</span><br></pre></td></tr></table></figure></p>
+<p>drop table if exists t_student;<br>truncate table  t_student;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 5.修改表（主要是添加字段和删除字段（列））</span><br><span class="line">#### 5.1 添加字段（列） alter table 表名 add column 字段名 字段类型 约束</span><br></pre></td></tr></table></figure></p>
+<p>alter table t_student add column scores float(5,2) default 0;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 5.2 删除字段   alter table 表名 drop column 字段名</span><br><span class="line">```alter table t_student drop column gender;</span><br></pre></td></tr></table></figure></p>
+<h1 id="二。DML-数据操作语言-主要针对数据库中的数据增删改查"><a href="#二。DML-数据操作语言-主要针对数据库中的数据增删改查" class="headerlink" title="二。DML 数据操作语言 -主要针对数据库中的数据增删改查"></a>二。DML 数据操作语言 -主要针对数据库中的数据增删改查</h1><h2 id="1-增（添加数据-记录）"><a href="#1-增（添加数据-记录）" class="headerlink" title="1.增（添加数据/记录）"></a>1.增（添加数据/记录）</h2><h3 id="1-1-插入数据-记录-insert-into-表名-values-值1，值2，值3。。。-依次给指定表中的字段赋值"><a href="#1-1-插入数据-记录-insert-into-表名-values-值1，值2，值3。。。-依次给指定表中的字段赋值" class="headerlink" title="1.1 插入数据/记录  insert into 表名 values(值1，值2，值3。。。)  依次给指定表中的字段赋值"></a>1.1 插入数据/记录  insert into 表名 values(值1，值2，值3。。。)  依次给指定表中的字段赋值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into t_student values(103,&apos;xiaoming&apos;,0,&apos;2010-9-8&apos;),(2,&apos;xiaohua&apos;,0,&apos;1994-3-4&apos;),(102,&apos;xiaohong&apos;,0,&apos;1998-9-10&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-插入数据-记录"><a href="#1-2-插入数据-记录" class="headerlink" title="1.2 插入数据/记录"></a>1.2 插入数据/记录</h3><p>– insert into 表名(字段1，字段2) values(值1，值2)  依次给指定表中的指定字段赋值，约束为not null的字段必须写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into t_student(stuname,birth) values(&apos;lisi&apos;,&apos;1991-10-20&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>– 值的问题：sql中数字对应的值直接写，字符串要使用引号引起，单双引号都可以，bit 类型的值只有0/1，时间可以用内容是满足时间格式的字符串，也可以是通过通过时间函数获取的值</p>
+<p>– 时间函数：<figure class="highlight plain"><figcaption><span>-当前时间```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">``` select now();    -结果显示当前 年月日 时分秒</span><br><span class="line">-- select date(now());  -获取当前日期</span><br><span class="line">-- SELECT year/month/day/hour/minute/second(now);</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-删（删除数据-记录）"><a href="#2-删（删除数据-记录）" class="headerlink" title="2.删（删除数据/记录）"></a>2.删（删除数据/记录）</h2><h3 id="2-1-delete-from-表名；-–删除指定表的所有记录"><a href="#2-1-delete-from-表名；-–删除指定表的所有记录" class="headerlink" title="2.1 delete from 表名； –删除指定表的所有记录"></a>2.1 delete from 表名； –删除指定表的所有记录</h3><figure class="highlight plain"><figcaption><span>from t_student；```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.2 delete from 表名 where 条件语句 --删除满足条件的记录</span><br><span class="line">-- SQL中的条件语句：=（判断是否相等） &lt;&gt;(不等于，和Python中的！=功能一样，&gt; ， &lt;  ，&gt;= ，&lt;=)</span><br></pre></td></tr></table></figure>
+<p>delete from t_student where stuid=1;<br>delete from t_student where stuid&lt;100;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 3.改（修改数据/记录）</span><br><span class="line">### update 表名 set 字段1=新值1,字段2=新值2。。； </span><br><span class="line">-- 将指定表中的指定字段/列的全部值赋值为新值</span><br></pre></td></tr></table></figure></p>
+<p>update t_student set gender=1;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### update 表名 set 字段1=新值1,字段2=新值2。。 where 条件语句</span><br><span class="line">-- 将指定表中的满足条件的行的值赋值为新值</span><br></pre></td></tr></table></figure></p>
+<p>update t_student set gender=0 where stuname=’xiaohua’ or stuname=’xiaohong ‘;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-- 通配符% : 表示任意个数的任意字符，包括0个</span><br><span class="line">-- 通配符_ : 表示一个任意字符</span><br><span class="line">```update t_student set birth=&apos;2000-01-01&apos; where stuname like &apos;xiao%&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>– 通配符_ : 表示一个任意字符<br><figure class="highlight plain"><figcaption><span>t_student set birth</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 注意：通配符只对字符串有效</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 4 查（获取数据）</span><br><span class="line">#### 4.11 select * from 表名  -直接查询，获取指定表中所有数据</span><br></pre></td></tr></table></figure></p>
+<p>select * from t_student;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 4.12 select 字段名1，字段名2。。。from 表名  -获取指定表中所有行中指定的列</span><br><span class="line">```select stuname,stuid from t_student ;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-13-select-字段名1，字段名2。。。-from-表名-where-条件语句"><a href="#4-13-select-字段名1，字段名2。。。-from-表名-where-条件语句" class="headerlink" title="4.13 select 字段名1，字段名2。。。 from 表名 where 条件语句"></a>4.13 select 字段名1，字段名2。。。 from 表名 where 条件语句</h4><p>– 获取指定表中满足条件的行的指定字段<br><figure class="highlight plain"><figcaption><span>stuname,stuid from t_student where stuname like 'xiao%';```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### 4.2 列/字段重命名</span><br><span class="line">-- select 字段1 as 新字段1，字段2 as 新字段2.。。from 表名,as可以省略</span><br><span class="line">```select stuid,stuname,gender as &apos;性别&apos; from t_student;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-3-对查询结果赋值（一般针对布尔数据-bit）"><a href="#4-3-对查询结果赋值（一般针对布尔数据-bit）" class="headerlink" title="4.3 对查询结果赋值（一般针对布尔数据 bit）"></a>4.3 对查询结果赋值（一般针对布尔数据 bit）</h3><p>– select if (字段名，值1，值2) from 表名；</p>
+<p>– 查询指定字段，并且判断字段和对应的值是0还是1，如果是1取值1，如果是0取值2</p>
+<p>– 这里的if用法是Mysql专有的，别的数据库不能使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select if(gender,&apos;男&apos;,&apos;女&apos;) as &apos;性别&apos; from t_student;</span><br></pre></td></tr></table></figure></p>
+<p>– 通用写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select case gender when 1 then &apos;男&apos; else &apos;女&apos; end as &apos;性别&apos; from t_student;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-4-对列进行合并运算"><a href="#4-4-对列进行合并运算" class="headerlink" title="4.4 对列进行合并运算"></a>4.4 对列进行合并运算</h3><p>– select concat(字段1，字段2。。。) from 表名；<br>– 注意：bit类型（布尔）的数据不能合并，数字和字母可以合并<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat (stuname,&apos;:&apos;,stuid) as &apos;name_id&apos; from t_student ;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-5-模糊查询"><a href="#4-5-模糊查询" class="headerlink" title="4.5 模糊查询"></a>4.5 模糊查询</h3><p>– 查询时通过like条件来指定查询对象<br>– sql 支持逻辑运算符and / or / not<br><figure class="highlight plain"><figcaption><span>* from t_student where stuname like '%i%' and not stuid<102;```< span></102;```<></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 4.6 排序（先查询再排序）</span><br><span class="line">-- select * from 表名 order by 字段  </span><br><span class="line">-- 对查询结果按照指定字段的值进行升序排序</span><br><span class="line">-- select * from 表名 order by 字段  esc  --升序</span><br><span class="line">-- select * from 表名 order by 字段  desc  --降序</span><br></pre></td></tr></table></figure></p>
+<p>select <em> from t_student order by gender;<br>select </em> from t_student order by stuid desc;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-- 先按性别升序排序，再按学号降序排序，写在前面的字段优先级高</span><br></pre></td></tr></table></figure></p>
+<p>select * from t_student order by gender,stuid desc;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">### 4.7 限制</span><br><span class="line">-- select * from 表名 limit N  - 获取查询结果中的前n条数据</span><br><span class="line">```select * from t_student limit 3;   ``` </span><br><span class="line"></span><br><span class="line">-- select * from 表名 limit M offset N -对查询结果跳过前N条数据往后取M条数据</span><br><span class="line">```select * from t_student limit 3 offset 4; -跳过前4条数据去3条数据</span><br></pre></td></tr></table></figure>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+		
+			<a href="/2019/02/21/vim编辑器之神/" title rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2019/02/18/hello-world/" title="Hello World">
+							Hello World
+						</a>
+						<p>
+							Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
+						</p>
+					</div>
+
+					<a href="/2019/02/18/hello-world/" title="Hello World">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="Hello World">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know 【表情】-->
+			
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'dX--',
+            appkey = 'dx--';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by John Doe. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p>
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+
+    <script src="/js/love.js"></script>
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>
